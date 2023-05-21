@@ -1,0 +1,51 @@
+# def partition(string,k):
+#     l1=""
+#     z=0
+#     a=len(string)
+#     q=a//k
+#     for i in range(0,q):
+#         s=string[z:]
+#         for j in s:
+#             if j not in l1:
+#                 l1=l1+s
+        
+
+# string=input()
+# k=int(input())
+# partition(string,k)
+
+
+str = input()
+
+k = int(input())
+
+print(str)
+
+newStr = ""
+for i in range(0, len(str)):
+    if len(str) - 1 == i:
+        break
+    if str[i] == str[i + 1]:
+        continue
+    else:
+        newStr = newStr + str[i]
+
+print(newStr)
+
+
+
+def partition(string, k):
+    if len(string) % k != 0:
+        return "Invalid"
+    result = []
+
+    for i in range(0, len(string), k):
+        subpart = string[i:i+k]
+        result.append(subpart)
+
+    return result
+
+string = input()
+k = int(input())
+
+print(partition(string, k))
