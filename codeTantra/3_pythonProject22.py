@@ -1,4 +1,5 @@
-noOfStudents = int(input("Enter the number of students (as integer): "))     # no of students
+# no of students
+noOfStudents = int(input("Enter the number of students (as integer): "))
 
 marksDict = {}                      # student name as key and marks as value
 
@@ -18,7 +19,8 @@ for i in range(0, noOfStudents):
     marksDict[name] = mark          # adding name and mark in dictionary
 
 
-print("\nPrinting all the students marks :-\n", marksDict)                    # printing marks dictionary
+# printing marks dictionary
+print("\nPrinting all the students marks :-\n", marksDict)
 
 
 markList.sort()
@@ -28,12 +30,12 @@ j = 1
 
 print("\nRank of all the students without any updatation :-")
 for i in markList:
-    print("Rank", j, "is: ", list(marksDict.keys())[list(marksDict.values()).index(i)])
+    print("Rank", j, "is: ", list(marksDict.keys())
+          [list(marksDict.values()).index(i)])
     j = j + 1
 
 
-
-while(1):
+while (1):
     print('\nType :-\n1. Update the marks\n2. Print all the student marks\n3. Exit the updatation program:')
     userWant = input()
     if userWant == "1":
@@ -48,14 +50,13 @@ while(1):
         else:
             print("\nEntered name is invalid!\nSelect again...\n")
 
-
     elif userWant == "2":
         print("\nPrinting all the student marks:\n", marksDict)
 
     elif userWant == "3":
         print("\nYou exit the updation program.")
         break
-    
+
     else:
         print("Please enter a valid input.\nTry again...\n")
 
@@ -67,7 +68,8 @@ print("Student's marks after updatation program:", markNew)
 
 print("\nPrinting all the students marks after updatation:\n ", marksDict)
 
-print("\nThe student who got the hightest marks is: ", list(marksDict.keys())[list(marksDict.values()).index(max(marksDict.values()))])
+print("\nThe student who got the hightest marks is: ", list(marksDict.keys())[
+      list(marksDict.values()).index(max(marksDict.values()))])
 
 
 j = 1
@@ -78,5 +80,6 @@ markNew.reverse()
 print("\nRank of all the students after updatation program :-")
 
 for i in markNew:
-    print("Rank", j, "is: ", list(marksDict.keys())[list(marksDict.values()).index(i)])
+    print("Rank", j, "is: ", list(marksDict.keys())
+          [list(marksDict.values()).index(i)])
     j = j + 1
